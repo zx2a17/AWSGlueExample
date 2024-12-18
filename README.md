@@ -56,3 +56,5 @@ graph TD;
 ![image](https://github.com/user-attachments/assets/d6bafad9-bf8f-4913-926a-52980a5e5400)
 
 9) Now, navigate to the Trigger tab to build some trigger events, where you can set up a trigger of another job on completion of the first job, or set a schedule or even a cron expression
+
+10) Finally, delete the bucket, role AWS Glue DB and the ETL jobs and triggers created
