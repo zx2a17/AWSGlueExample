@@ -19,7 +19,7 @@ the referred Database and tables are information ABOUT the data, where the actua
 ![image](https://github.com/user-attachments/assets/7671e20c-39dc-41bf-a5a8-c1bcd86338aa)
 
 Project Steps:
-1) Create S3 buckets for data source and targets with the following folder structure.
+1) Create S3 buckets for data source and targets with the following folder structure. These Partitions make querying the data more efficently
 
 
 ``` mermaid
@@ -41,4 +41,5 @@ graph TD;
 2) create AWS service role for Glue, include permission to access s3
 3) load the csv file found in this repo
 4) create the database on Glue
-5) Create Crawler to bring the schema information across to 
+5) Create Crawler to bring the schema information across to the glue datacatalog, the data itself will sit and remain where it lives.
+6) 
