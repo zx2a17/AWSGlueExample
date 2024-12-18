@@ -41,5 +41,12 @@ graph TD;
 2) create AWS service role for Glue, include permission to access s3
 3) load the csv file found in this repo
 4) create the database on Glue
-5) Create Crawler to bring the schema information across to the glue datacatalog, the data itself will sit and remain where it lives.
-6) 
+5) Create Crawler to bring the schema information across to the glue datacatalog, the data itself will sit and remain where it lives. (instead of creating the schema manually)
+      - you will also need to specify the partition column name - in this example it's called Dataload
+      - also specify the type of the data, int, bool etc
+   - then you can run the crawler with the source being the customer csv (original data) and the output to the AWS Glue database (where the schema will live, not the actual data)
+   - then the table will be added once you run the crawler
+   
+6) before you run any ETL job, you can view the data using Athena, just need to make sure there is an s3 place for the athena results
+7) now we can define our ETL Job!
+      In this example we just want to transform the csv into parquet format and remove any nulls
