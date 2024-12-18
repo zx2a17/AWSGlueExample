@@ -50,3 +50,9 @@ graph TD;
 6) before you run any ETL job, you can view the data using Athena, just need to make sure there is an s3 place for the athena results
 7) now we can define our ETL Job!
       In this example we just want to transform the csv into parquet format and remove any nulls
+
+8) The visual editor was used to add 3 blocks, by selecting the source, transform and target tabs of the visual editor
+
+![image](https://github.com/user-attachments/assets/d6bafad9-bf8f-4913-926a-52980a5e5400)
+
+9) Now, navigate to the Trigger tab to build some trigger events, where you can set up a trigger of another job on completion of the first job, or set a schedule or even a cron expression
